@@ -21,13 +21,13 @@ class TicketPage extends StatelessWidget {
                 "Tickets",
                 style: Styles.headlineStyle1.copyWith(fontSize: 30),
               ),
-              FittedBox(
+              const FittedBox(
                   child: SelectedTab(
                 titleLeft: "Đang cập nhật",
                 titleRight: "Trước đó",
               )),
-              Container(
-                child: TicketView(ticket: ticketList[0],)
+              TicketView(
+                ticket: ticketList[0],
               )
             ],
           ),

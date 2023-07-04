@@ -22,7 +22,7 @@ class TicketView extends StatelessWidget {
             children: [
               Container(
                 //top
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 margin: EdgeInsets.only(top: 10),
                 decoration:const BoxDecoration(
                   color: Color(0xFF526799),

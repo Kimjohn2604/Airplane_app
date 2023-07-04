@@ -4,18 +4,21 @@ List<Map<String, dynamic>> hotelList = [
     'place': 'One Space',
     'destination': 'London',
     'price': 25,
+    'link' : 'https://flutter.dev'
   },
   {
     'image': 'ks2.jpg',
     'place': 'Global Will',
     'destination': 'Dubai',
     'price': 40,
+    'link' : 'https://facebook.com'
   },
   {
     'image': 'ks1.jpg',
     'place': 'One Space',
     'destination': 'London',
     'price': 25,
+    'link' : 'https://google.com'
   }
 ];
 List<Map<String, dynamic>> ticketList = [
