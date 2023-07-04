@@ -36,10 +36,10 @@ class SearchPage extends StatelessWidget {
                   text: "Hạ cánh",
                 ),
                 Container(
-                  margin: EdgeInsets.symmetric(vertical: 15),
-                  padding: EdgeInsets.all(15),
+                  margin: const EdgeInsets.symmetric(vertical: 15),
+                  padding: const EdgeInsets.all(15),
                   decoration: BoxDecoration(
-                      color: Color(0xFF526799),
+                      color: const Color(0xFF526799),
                       borderRadius: BorderRadius.circular(12)),
                   child:const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -60,12 +60,12 @@ class SearchPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Container(
-                      margin: EdgeInsets.only(right: 10),
-                      padding: EdgeInsets.all(12),
+                      margin: const EdgeInsets.only(right: 10),
+                      padding: const EdgeInsets.all(12),
                       height: 400,
                       width: MediaQuery.of(context).size.width * 0.44,
                       decoration: BoxDecoration(
-                          color: Color(0xFF526799),
+                          color: const Color(0xFF526799),
                           borderRadius: BorderRadius.circular(12)),
                       child: Column(
                         children: [
@@ -74,11 +74,11 @@ class SearchPage extends StatelessWidget {
                             decoration: BoxDecoration(
                                 borderRadius: BorderRadius.circular(10),
                                 color: Colors.grey,
-                                image: DecorationImage(
+                                image: const DecorationImage(
                                     fit: BoxFit.cover,
                                     image: AssetImage("asset/image/ks1.jpg"))),
                           ),
-                          SizedBox(
+                          const SizedBox(
                             height: 20,
                           ),
                           Text(
@@ -94,7 +94,7 @@ class SearchPage extends StatelessWidget {
                         Stack(
                           children: [
                             Container(
-                              padding: EdgeInsets.symmetric(
+                              padding: const EdgeInsets.symmetric(
                                   horizontal: 10, vertical: 20),
                               height: 200,
                               width: MediaQuery.of(context).size.width * 0.43,
@@ -110,7 +110,7 @@ class SearchPage extends StatelessWidget {
                                     style: Styles.headlineStyle2.copyWith(
                                         color: Colors.white, fontSize: 20),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     height: 10,
                                   ),
                                   Text(
@@ -125,7 +125,7 @@ class SearchPage extends StatelessWidget {
                               top: -25,
                               right: -35,
                               child: Container(
-                                padding: EdgeInsets.all(25),
+                                padding: const EdgeInsets.all(25),
                                 decoration: BoxDecoration(
                                   shape: BoxShape.circle,
                                   border: Border.all(
@@ -137,9 +137,9 @@ class SearchPage extends StatelessWidget {
                           ],
                         ),
                         Container(
-                          padding: EdgeInsets.symmetric(
+                          padding: const EdgeInsets.symmetric(
                               horizontal: 10, vertical: 20),
-                          margin: EdgeInsets.symmetric(vertical: 10),
+                          margin: const EdgeInsets.symmetric(vertical: 10),
                           height: 174,
                           width: MediaQuery.of(context).size.width * 0.42,
                           decoration: BoxDecoration(
@@ -154,7 +154,7 @@ class SearchPage extends StatelessWidget {
                                 style: Styles.headlineStyle2.copyWith(
                                     color: Colors.white, fontSize: 28),
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
                               RichText(

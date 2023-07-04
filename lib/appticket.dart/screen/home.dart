@@ -66,7 +66,8 @@ class MyhomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              const ContainerText(bigText: "Upcoming flight", smallText: "View All")
+              const ContainerText(
+                  bigText: "Upcoming flight", smallText: "View All")
             ]),
           ),
           SingleChildScrollView(
