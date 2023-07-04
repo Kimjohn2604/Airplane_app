@@ -82,10 +82,10 @@ class MyhomePage extends StatelessWidget {
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                ContainerText(bigText: "Hotels", smallText: "View All"),
+                const ContainerText(bigText: "Hotels", smallText: "View All"),
                 const SizedBox(
                   height: 20,
                 ),
