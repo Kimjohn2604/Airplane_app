@@ -2,9 +2,9 @@ import 'package:app/appticket.dart/app_info.dart';
 import 'package:app/appticket.dart/styles/app_style.dart';
 import 'package:flutter/material.dart';
 
-import '../hotel_view.dart';
 import '../styles/column.dart';
-import '../ticket_view.dart';
+import '../views/hotel_view.dart';
+import '../views/ticket_view.dart';
 
 class MyhomePage extends StatelessWidget {
   const MyhomePage({super.key});

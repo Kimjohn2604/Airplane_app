@@ -3,7 +3,7 @@ import 'package:flutter/cupertino.dart';
 
 import '../styles/app_style.dart';
 import '../styles/slectedtab.dart';
-import '../ticket_view.dart';
+import '../views/ticket_view.dart';
 
 class TicketPage extends StatelessWidget {
   const TicketPage({super.key});

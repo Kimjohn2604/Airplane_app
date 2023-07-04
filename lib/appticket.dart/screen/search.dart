@@ -1,10 +1,9 @@
 import 'package:app/appticket.dart/styles/column.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import '../../lookingview.dart';
 import '../styles/app_style.dart';
 import '../styles/slectedtab.dart';
+import '../views/lookingview.dart';
 
 class SearchPage extends StatelessWidget {
   const SearchPage({super.key});
@@ -23,14 +22,16 @@ class SearchPage extends StatelessWidget {
                   "What are\nyou looking for?",
                   style: Styles.headlineStyle1.copyWith(fontSize: 35),
                 ),
-                FittedBox(
-                  child: SelectedTab(titleLeft: "Vé máy bay", titleRight: "Khách sạn",)
-                ),
-                LookingView(
+                const FittedBox(
+                    child: SelectedTab(
+                  titleLeft: "Vé máy bay",
+                  titleRight: "Khách sạn",
+                )),
+                const LookingView(
                   icons: Icons.flight_takeoff_outlined,
                   text: "Khởi hành",
                 ),
-                LookingView(
+                const LookingView(
                   icons: Icons.flight_land_outlined,
                   text: "Hạ cánh",
                 ),
@@ -40,7 +41,7 @@ class SearchPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: Color(0xFF526799),
                       borderRadius: BorderRadius.circular(12)),
-                  child: Row(
+                  child:const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
@@ -50,10 +51,10 @@ class SearchPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 20,
                 ),
-                ContainerText(
+                const ContainerText(
                     bigText: "Upcoming flight", smallText: "View All"),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
