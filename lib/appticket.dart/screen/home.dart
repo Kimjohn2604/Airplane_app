@@ -16,7 +16,7 @@ class MyhomePage extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(children: [
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -41,18 +41,18 @@ class MyhomePage extends StatelessWidget {
                     decoration: BoxDecoration(
                         color: Colors.grey,
                         borderRadius: BorderRadius.circular(50),
-                        image: DecorationImage(
+                        image: const DecorationImage(
                             /* fit: BoxFit.fitWidth, */
                             image: AssetImage("asset/image/plane.png"))),
                     /* Image.asset("asset/image/plane.png")), */
                   )
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Container(
-                padding: EdgeInsets.all(10),
+                padding: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
                     color: Colors.grey.shade100),
@@ -66,7 +66,7 @@ class MyhomePage extends StatelessWidget {
               const SizedBox(
                 height: 20,
               ),
-              ContainerText(bigText: "Upcoming flight", smallText: "View All")
+              const ContainerText(bigText: "Upcoming flight", smallText: "View All")
             ]),
           ),
           SingleChildScrollView(
@@ -82,10 +82,10 @@ class MyhomePage extends StatelessWidget {
             height: 20,
           ),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 20),
+            padding: const EdgeInsets.symmetric(horizontal: 20),
             child: Column(
               children: [
-                ContainerText(bigText: "Hotels", smallText: "View All"),
+                const ContainerText(bigText: "Hotels", smallText: "View All"),
                 const SizedBox(
                   height: 20,
                 ),
