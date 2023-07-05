@@ -1,7 +1,8 @@
-import 'package:app/appticket.dart/app_info.dart';
-import 'package:app/appticket.dart/styles/app_style.dart';
+
 import 'package:flutter/material.dart';
 
+import '../app_info.dart';
+import '../styles/app_style.dart';
 import '../styles/column.dart';
 import '../views/hotel_view.dart';
 import '../views/ticket_view.dart';
