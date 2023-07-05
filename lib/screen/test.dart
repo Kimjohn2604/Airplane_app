@@ -1,5 +1,5 @@
-import 'package:app/appticket.dart/screen/person.dart';
-import 'package:app/appticket.dart/screen/search.dart';
+import 'package:app/screen/person.dart';
+import 'package:app/screen/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,8 @@
-import 'package:app/appticket.dart/styles/app_style.dart';
+
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
+import '../styles/app_style.dart';
 import '../views/column_of_ticketview.dart';
 
 class PersonPage extends StatelessWidget {

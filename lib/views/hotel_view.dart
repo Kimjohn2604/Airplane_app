@@ -1,6 +1,8 @@
-import 'package:app/appticket.dart/styles/app_style.dart';
+
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import '../styles/app_style.dart';
 
 class HotelView extends StatelessWidget {
   final Map<String, dynamic> hotel;

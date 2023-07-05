@@ -1,9 +1,10 @@
-import 'package:app/appticket.dart/styles/app_layout.dart';
-import 'package:app/appticket.dart/styles/container_stytles.dart';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../styles/app_layout.dart';
 import '../styles/app_style.dart';
+import '../styles/container_stytles.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String,dynamic> ticket;

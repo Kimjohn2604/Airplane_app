@@ -1,7 +1,8 @@
-import 'package:app/appticket.dart/styles/column.dart';
+
 import 'package:flutter/material.dart';
 
 import '../styles/app_style.dart';
+import '../styles/column.dart';
 import '../styles/slectedtab.dart';
 import '../views/lookingview.dart';
 

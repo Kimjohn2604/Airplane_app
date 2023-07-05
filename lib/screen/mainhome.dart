@@ -1,6 +1,8 @@
-import 'package:app/appticket.dart/styles/app_style.dart';
-import 'package:app/appticket.dart/screen/test.dart';
+
+import 'package:app/screen/test.dart';
 import 'package:flutter/material.dart';
+
+import '../styles/app_style.dart';
 
 
 void main() {
