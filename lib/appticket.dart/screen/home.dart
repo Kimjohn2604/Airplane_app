@@ -6,8 +6,8 @@ import '../styles/column.dart';
 import '../views/hotel_view.dart';
 import '../views/ticket_view.dart';
 
-class MyhomePage extends StatelessWidget {
-  const MyhomePage({super.key});
+class HomePage extends StatelessWidget {
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {

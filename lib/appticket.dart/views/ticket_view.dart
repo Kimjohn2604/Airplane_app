@@ -1,12 +1,11 @@
 import 'package:app/appticket.dart/styles/app_layout.dart';
 import 'package:app/appticket.dart/styles/container_stytles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../styles/app_style.dart';
 
 class TicketView extends StatelessWidget {
-  final Map<String,dynamic> ticket;
+  final Map<String, dynamic> ticket;
   const TicketView({super.key, required this.ticket});
   //view cua ve
   @override
@@ -15,19 +14,21 @@ class TicketView extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
       child: SizedBox(
-        width: MediaQuery.of(context).size.width*0.8  ,
+        width: MediaQuery.of(context).size.width * 0.8,
         height: 190,
-        child: Container(
+        child: SingleChildScrollView(
           child: Column(
             children: [
               Container(
                 //top
-                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                margin: EdgeInsets.only(top: 10),
-                decoration:const BoxDecoration(
-                  color: Color(0xFF526799),
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15))
-                ),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                margin: const EdgeInsets.only(top: 10),
+                decoration: const BoxDecoration(
+                    color: Color(0xFF526799),
+                    borderRadius: BorderRadius.only(
+                        topLeft: Radius.circular(15),
+                        topRight: Radius.circular(15))),
                 child: Column(
                   children: [
                     Row(
@@ -37,7 +38,7 @@ class TicketView extends StatelessWidget {
                           style: Styles.headlineStyle3,
                         ),
                         const Spacer(), // = Expanded(child: Container())
-                        ThickContainer(),
+                        const ThickContainer(),
                         Expanded(
                           child: Stack(children: [
                             SizedBox(
@@ -54,7 +55,7 @@ class TicketView extends StatelessWidget {
                                         (index) => Container(
                                               height: 2,
                                               width: 2,
-                                              decoration: BoxDecoration(
+                                              decoration: const BoxDecoration(
                                                   color: Colors.white),
                                             )), //Độ dài của list bên trong box
                                   );
@@ -71,7 +72,7 @@ class TicketView extends StatelessWidget {
                             ), /* Icon(Icons.airplane_ticket), */
                           ]),
                         ),
-                        ThickContainer(),
+                        const ThickContainer(),
                         const Spacer(), // = mainAxisAlignment.center
                         Text(
                           ticket['to']['code'],
@@ -79,20 +80,20 @@ class TicketView extends StatelessWidget {
                         )
                       ],
                     ),
-                     Row(
+                    Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text(
                           ticket['from']['name'],
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                         Text(
                           "${ticket['flyingtime']}",
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                         Text(
                           ticket['to']['name'],
-                          style: TextStyle(color: Colors.white),
+                          style: const TextStyle(color: Colors.white),
                         ),
                       ],
                     )
@@ -130,7 +131,7 @@ class TicketView extends StatelessWidget {
                                       height: 2,
                                       width: 10,
                                       decoration:
-                                          BoxDecoration(color: Colors.white),
+                                          const BoxDecoration(color: Colors.white),
                                     )), //Độ dài của list bên trong box
                           );
                         },
@@ -153,11 +154,12 @@ class TicketView extends StatelessWidget {
               ),
               Container(
                 //bottom
-                padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                decoration:const BoxDecoration(
-                  color: Color.fromARGB(255, 165, 81, 116),
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15))
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
+                decoration: const BoxDecoration(
+                    color: Color.fromARGB(255, 165, 81, 116),
+                    borderRadius: BorderRadius.only(
+                        bottomLeft: Radius.circular(15),
+                        bottomRight: Radius.circular(15))),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -168,7 +170,7 @@ class TicketView extends StatelessWidget {
                           "${ticket['date']}",
                           style: Styles.headlineStyle3,
                         ),
-                        Text(
+                        const Text(
                           "Date",
                           style: TextStyle(color: Colors.white),
                         ),
@@ -181,7 +183,7 @@ class TicketView extends StatelessWidget {
                           "${ticket['departure']}",
                           style: Styles.headlineStyle3,
                         ),
-                        Text(
+                        const Text(
                           "Depature Time",
                           style: TextStyle(color: Colors.white),
                         ),
@@ -194,7 +196,7 @@ class TicketView extends StatelessWidget {
                           "${ticket['number']}",
                           style: Styles.headlineStyle3,
                         ),
-                        Text(
+                        const Text(
                           "Number",
                           style: TextStyle(color: Colors.white),
                         ),

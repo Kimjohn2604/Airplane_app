@@ -1,45 +1,45 @@
 import 'package:app/appticket.dart/screen/search.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-import 'ticket.dart';
 import 'home.dart';
+import 'ticket.dart';
 
-class MyTest extends StatefulWidget {
-  MyTest({super.key});
+class BottomNavbar extends StatefulWidget {
+  const BottomNavbar({super.key});
 
   @override
-  State<MyTest> createState() => _MyTestState();
+  State<BottomNavbar> createState() => _BottomNavbarState();
 }
 
-class _MyTestState extends State<MyTest> {
-  int SelectedItems = 0;
-  void Change(int index) {
-    setState(() {
-      SelectedItems = index;
-    });
-  }
-
+class _BottomNavbarState extends State<BottomNavbar> {
+  int selectedItems = 0;
   static final List<Widget> _wigetItems = <Widget>[
-    const MyhomePage(),
+    const HomePage(),
     const SearchPage(),
     const TicketPage(),
     const Text('Person'),
   ];
+  
+  void change(int index) {
+    setState(() {
+      selectedItems = index;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _wigetItems[SelectedItems],
+      body: _wigetItems[selectedItems],
       bottomNavigationBar: BottomNavigationBar(
-          currentIndex: SelectedItems, // Cho biết item nào được chọn
+          currentIndex: selectedItems, // Cho biết item nào được chọn
           type: BottomNavigationBarType.fixed, // cố định item
-          onTap: Change,
+          onTap: change,
           elevation: 20, // shadow
           showSelectedLabels: true,
           showUnselectedLabels: true,
           selectedItemColor: Colors.blue,
           unselectedItemColor: Colors.blue,
-          items:const [
+          items: const [
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Action'),
             BottomNavigationBarItem(
@@ -61,5 +61,3 @@ class _MyTestState extends State<MyTest> {
     );
   }
 }
-
-
