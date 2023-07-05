@@ -1,3 +1,4 @@
+import 'package:app/appticket.dart/screen/person.dart';
 import 'package:app/appticket.dart/screen/search.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -24,7 +25,7 @@ class _MyTestState extends State<MyTest> {
     const MyhomePage(),
     const SearchPage(),
     const TicketPage(),
-    const Text('Person'),
+    const PersonPage(),
   ];
   @override
   Widget build(BuildContext context) {
@@ -43,7 +44,7 @@ class _MyTestState extends State<MyTest> {
             BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
             BottomNavigationBarItem(icon: Icon(Icons.search), label: 'Action'),
             BottomNavigationBarItem(
-                icon: Icon(Icons.airplane_ticket), label: 'Airplane'),
+                icon: Icon(Icons.airplane_ticket), label: 'Ticket'),
             BottomNavigationBarItem(icon: Icon(Icons.person), label: 'person')
           ]),
       /* body: Container(

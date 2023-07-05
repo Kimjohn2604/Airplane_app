@@ -25,7 +25,7 @@ class SelectedTab extends StatelessWidget {
               child: Center(child: Text(titleLeft))),
           Container(
               padding: EdgeInsets.all(12),
-              width: MediaQuery.of(context).size.width * 0.56,
+              width: MediaQuery.of(context).size.width * 0.5,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(12),

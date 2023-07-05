@@ -39,13 +39,13 @@ class MyhomePage extends StatelessWidget {
                     height: 50,
                     width: 50,
                     decoration: BoxDecoration(
-                        color: Colors.grey,
-                        borderRadius: BorderRadius.circular(50),
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
                         image: const DecorationImage(
-                            /* fit: BoxFit.fitWidth, */
-                            image: AssetImage("asset/image/plane.png"))),
+                            fit: BoxFit.cover,
+                            image: AssetImage("asset/image/airplaine.png"))),
                     /* Image.asset("asset/image/plane.png")), */
-                  )
+                  ),
                 ],
               ),
               const SizedBox(

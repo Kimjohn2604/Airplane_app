@@ -7,7 +7,8 @@ import '../styles/app_style.dart';
 
 class TicketView extends StatelessWidget {
   final Map<String,dynamic> ticket;
-  const TicketView({super.key, required this.ticket});
+  final bool? isColor;
+  const TicketView({super.key, required this.ticket, this.isColor});
   //view cua ve
   @override
   Widget build(BuildContext context) {
@@ -24,8 +25,8 @@ class TicketView extends StatelessWidget {
                 //top
                 padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 20),
                 margin: EdgeInsets.only(top: 10),
-                decoration:const BoxDecoration(
-                  color: Color(0xFF526799),
+                decoration: BoxDecoration(
+                  color: isColor ==null ? Color(0xFF526799) : Colors.white,
                   borderRadius: BorderRadius.only(topLeft: Radius.circular(15), topRight: Radius.circular(15))
                 ),
                 child: Column(
@@ -34,10 +35,10 @@ class TicketView extends StatelessWidget {
                       children: [
                         Text(
                           ticket['from']['code'],
-                          style: Styles.headlineStyle3,
+                          style: Styles.headlineStyle3.copyWith(color: isColor ==null ? Colors.white :Colors.black54),
                         ),
                         const Spacer(), // = Expanded(child: Container())
-                        ThickContainer(),
+                        ThickContainer(isColor: true ,),
                         Expanded(
                           child: Stack(children: [
                             SizedBox(
@@ -49,13 +50,13 @@ class TicketView extends StatelessWidget {
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
                                     children: List.generate(
-                                        (constraints.constrainWidth() / 5)
+                                        (constraints.constrainWidth() / 7)
                                             .floor(),
                                         (index) => Container(
                                               height: 2,
                                               width: 2,
                                               decoration: BoxDecoration(
-                                                  color: Colors.white),
+                                                  color: isColor ==null ? Colors.white :Colors.blue.shade100),
                                             )), //Độ dài của list bên trong box
                                   );
                                 },
@@ -64,18 +65,18 @@ class TicketView extends StatelessWidget {
                             Center(
                               child: Transform.rotate(
                                   angle: 1.5, //hướng đi của icon
-                                  child: const Icon(
+                                  child:  Icon(
                                     Icons.local_airport_rounded,
-                                    color: Colors.white,
+                                    color: isColor ==null ? Colors.white :Colors.blue.shade300,
                                   )),
                             ), /* Icon(Icons.airplane_ticket), */
                           ]),
                         ),
-                        ThickContainer(),
+                        ThickContainer(isColor: true,),
                         const Spacer(), // = mainAxisAlignment.center
                         Text(
                           ticket['to']['code'],
-                          style: Styles.headlineStyle3,
+                          style: Styles.headlineStyle3.copyWith(color: isColor ==null ? Colors.white :Colors.black54),
                         )
                       ],
                     ),
@@ -84,15 +85,15 @@ class TicketView extends StatelessWidget {
                       children: [
                         Text(
                           ticket['from']['name'],
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey.shade500),
                         ),
                         Text(
                           "${ticket['flyingtime']}",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey.shade500),
                         ),
                         Text(
                           ticket['to']['name'],
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey.shade500),
                         ),
                       ],
                     )
@@ -101,7 +102,7 @@ class TicketView extends StatelessWidget {
               ),
               Container(
                 //giua
-                color: Colors.orange,
+                color: isColor ==null ? Colors.orange :Colors.white,
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -118,8 +119,8 @@ class TicketView extends StatelessWidget {
                     ),
                     Expanded(
                         child: SizedBox(
-                      height: 24, //dcm
-                      child: LayoutBuilder(
+                      /* height: 24, */ //dcm
+                      child: LayoutBuilder(// đường gạch ngang
                         builder: (context, constraints) {
                           return Flex(
                             direction: Axis.horizontal, // hướng của box
@@ -130,7 +131,7 @@ class TicketView extends StatelessWidget {
                                       height: 2,
                                       width: 10,
                                       decoration:
-                                          BoxDecoration(color: Colors.white),
+                                          BoxDecoration(color: isColor ==null ? Colors.white :Colors.grey.shade400),
                                     )), //Độ dài của list bên trong box
                           );
                         },
@@ -154,9 +155,11 @@ class TicketView extends StatelessWidget {
               Container(
                 //bottom
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 20),
-                decoration:const BoxDecoration(
-                  color: Color.fromARGB(255, 165, 81, 116),
-                  borderRadius: BorderRadius.only(bottomLeft: Radius.circular(15), bottomRight: Radius.circular(15))
+                decoration: BoxDecoration(
+                  color: isColor ==null ? Color.fromARGB(255, 165, 81, 116):Colors.white,
+                  borderRadius: BorderRadius.only(
+                    bottomLeft: Radius.circular(isColor == null?15:0), bottomRight: Radius.circular(isColor == null?15:0)
+                    )
                 ),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -166,11 +169,11 @@ class TicketView extends StatelessWidget {
                       children: [
                         Text(
                           "${ticket['date']}",
-                          style: Styles.headlineStyle3,
+                          style: Styles.headlineStyle3.copyWith(color: isColor ==null ? Colors.white :Colors.black54),
                         ),
                         Text(
                           "Date",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey.shade500),
                         ),
                       ],
                     ),
@@ -179,11 +182,11 @@ class TicketView extends StatelessWidget {
                       children: [
                         Text(
                           "${ticket['departure']}",
-                          style: Styles.headlineStyle3,
+                          style: Styles.headlineStyle3.copyWith(color: isColor ==null ? Colors.white :Colors.black54),
                         ),
                         Text(
                           "Depature Time",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey.shade500),
                         ),
                       ],
                     ),
@@ -192,11 +195,11 @@ class TicketView extends StatelessWidget {
                       children: [
                         Text(
                           "${ticket['number']}",
-                          style: Styles.headlineStyle3,
+                          style: Styles.headlineStyle3.copyWith(color: isColor ==null ? Colors.white :Colors.black54),
                         ),
                         Text(
                           "Number",
-                          style: TextStyle(color: Colors.white),
+                          style: TextStyle(color: Colors.grey.shade500),
                         ),
                       ],
                     ),

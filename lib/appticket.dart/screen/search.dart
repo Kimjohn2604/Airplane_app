@@ -20,7 +20,7 @@ class SearchPage extends StatelessWidget {
               children: [
                 Text(
                   "What are\nyou looking for?",
-                  style: Styles.headlineStyle1.copyWith(fontSize: 35),
+                  style: Styles.headlineStyle1.copyWith(fontSize: 30),
                 ),
                 const FittedBox(
                     child: SelectedTab(
@@ -41,7 +41,7 @@ class SearchPage extends StatelessWidget {
                   decoration: BoxDecoration(
                       color: const Color(0xFF526799),
                       borderRadius: BorderRadius.circular(12)),
-                  child:const Row(
+                  child: const Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
@@ -121,6 +121,7 @@ class SearchPage extends StatelessWidget {
                                 ],
                               ),
                             ),
+                            //Vòng tròn di chuyển
                             Positioned(
                               top: -25,
                               right: -35,
@@ -133,7 +134,7 @@ class SearchPage extends StatelessWidget {
                                   color: Colors.transparent,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         ),
                         Container(
