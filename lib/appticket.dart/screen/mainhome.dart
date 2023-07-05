@@ -1,10 +1,10 @@
 import 'package:app/appticket.dart/styles/app_style.dart';
-import 'package:app/appticket.dart/screen/test.dart';
+import 'package:app/appticket.dart/screen/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 
 
 void main() {
-  runApp(Myapp()
+  runApp(const Myapp()
   );
 }
 class Myapp extends StatelessWidget {
@@ -13,7 +13,7 @@ class Myapp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  MaterialApp(
-      home: MyTest(),
+      home: const BottomNavbar(),
       debugShowCheckedModeBanner: false,
       title: "Demo",
       theme: ThemeData(
