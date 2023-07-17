@@ -5,9 +5,9 @@ part 'app_event.dart';
 part 'app_state.dart';
 
 class AppBloc extends Bloc<AppEvent, AppState> {
-  AppBloc() : super(AppInitial()) {
-    on<AppEvent>((event, emit) {
-      // TODO: implement event handler
+  AppBloc() : super(AppState()) {
+    on<TriggleAppEvent>((event, emit) {
+      emit(AppState(index: event.index));
     });
   }
 }
