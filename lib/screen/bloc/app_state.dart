@@ -1,6 +1,9 @@
 part of 'app_bloc.dart';
 
-@immutable
-abstract class AppState {}
+class AppState {
+  final int index;
+  AppState({this.index=0});
+  
+}
 
-class AppInitial extends AppState {}
+
